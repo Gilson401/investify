@@ -9,16 +9,17 @@
         <label for="last name">senha:</label>
         <input type="password" v-model="password" required min="8" />
         <br />
-    
-        <h2>Digitando:</h2>
-        <p> </p>
+    <br />
+        <!-- <h2>Digitando:</h2> -->
+        <div class='errolist' v-if="errors.length > 0" > Existem erros
         
-        <tr v-for="erro in errors" :key="erro.id">
-                    <p>{{erro}} </p>
+        
+        <div class='errolistitem' v-for="erro in errors" :key="erro.id">
+                    {{erro}} 
                    
-                </tr>
+        </div>
       
-
+ </div>
         <button @click="checkForm"> checkForm </button>
     
 
@@ -38,6 +39,7 @@ export default {
       fEmail: null,
       password: null,
       submitted: false,
+      emailRegex : RegExp(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)
     };
   },
   computed: {
@@ -62,7 +64,12 @@ export default {
       if (this.password && this.password.length < 8)  {
           this.errors.push("Senha deve ter no mínimo 8 caracteres.");
       }
-      
+      debugger
+      const test = this.emailRegex.test(this.fEmail)
+      if (!test){
+          this.errors.push("Insira um email válido");
+      }
+
       if(this.errors.length > 0){
         return false
       }else{
@@ -89,7 +96,18 @@ input {
   border: 1px double rgb(102, 97, 96);
   border-radius: 4px;
 }
-h3 {
+.errolist{
+font-size: 20px;
+}
+
+.errolistitem{
+    font-size: 12px;
+    font-weight: 700;
+    text-align: left;
+}
+
+h3, h2{
+
   margin: 40px 0 0;
 }
 ul {
