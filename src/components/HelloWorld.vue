@@ -74,8 +74,7 @@ export default {
       if(this.errors.length > 0){
         return false
       }else{
-           router.push('inicial')
-          alert('Ok')
+        router.push('inicial')     
         return true
       }     
    

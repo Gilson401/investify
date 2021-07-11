@@ -1,7 +1,7 @@
 <template >
   <div @click="clicarTela" class="about" >
       <img alt="pokerface" src="../assets/poker-face.jpg">
-    <h1>Rota inicial. Cara de paisagem: :|</h1>
+    <h1>Que tédio. Clica em algum lugar na tela pra ver se muda algo.</h1>
   </div>
 </template>
 
@@ -41,7 +41,7 @@ export default {
 .about {
   height: 100vh;
   width: 100vw;
-  border: 12px red solid;
+  /* border: 12px red solid; */
   cursor: pointer;
 }
 

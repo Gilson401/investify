@@ -1,8 +1,8 @@
 <template>
   <div @click="clicarTela" class="about">
-    <img  alt="cara triste" src="../assets/sadface.png" />
+    <img  alt="cara feliz" src="../assets/happyface.jpg" />
 
-    <h1>Mano, piorou. Tenta novamente. Pensamento positivo, cara!</h1>
+    <h1>Vue? Nunca desista. Seja persistente. <br/>No fim a vida te coloca um sorriso no rosto.</h1>
   </div>
 </template>
 
@@ -11,7 +11,7 @@ import { mapState, mapActions } from "vuex";
 import router from "@/router";
 
 export default {
-  name: "Triste",
+  name: "FelizComponente",
   props: {
     msg: String,
   },
