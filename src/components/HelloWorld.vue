@@ -28,6 +28,7 @@
 
 <script>
 import { mapState, mapActions } from "vuex";
+import router from "@/router";
 export default {
   name: "HelloWorld",
   props: {
@@ -64,7 +65,7 @@ export default {
       if (this.password && this.password.length < 8)  {
           this.errors.push("Senha deve ter no mínimo 8 caracteres.");
       }
-      debugger
+ 
       const test = this.emailRegex.test(this.fEmail)
       if (!test){
           this.errors.push("Insira um email válido");
@@ -73,6 +74,8 @@ export default {
       if(this.errors.length > 0){
         return false
       }else{
+           router.push('inicial')
+          alert('Ok')
         return true
       }     
    
@@ -98,12 +101,14 @@ input {
 }
 .errolist{
 font-size: 20px;
+
 }
 
 .errolistitem{
     font-size: 12px;
     font-weight: 700;
     text-align: left;
+    margin: 8px 0 0 0;
 }
 
 h3, h2{

@@ -18,8 +18,14 @@ const routes = [
   {
     path: '/inicial',
     name: 'Inicial',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Inicial.vue')
+    component: () => import(/* webpackChunkName: "inicial" */ '../views/Inicial.vue')
+  },
+  {
+    path: '/triste',
+    name: 'Triste',
+    component: () => import(/* webpackChunkName: "triste" */ '../views/Triste.vue')
   }
+  
 ]
 
 const router = createRouter({

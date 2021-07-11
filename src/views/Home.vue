@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
-    <HelloWorld msg="Mensagem passada por props para o componente HelloWorld. Faça Login"/>
+    <HelloWorld msg="Faça Login"/>
   </div>
 </template>
 
