@@ -50,8 +50,7 @@ export default {
   methods: {
     ...mapActions("account", ["login", "logout"]),
     checkForm() {
-        this.errors = [];    
-    //   debugger
+      this.errors = [];    
       if (!this.fEmail) {
           this.errors.push("Inserir Email.");
       }
@@ -65,11 +64,8 @@ export default {
       }
       
       if(this.errors.length > 0){
-        // console.log("erros", this.errors)  
-        // alert(this.errors)
         return false
       }else{
-        // console.log("tudo ok, prossiga")  
         return true
       }     
    
