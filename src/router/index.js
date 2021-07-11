@@ -24,6 +24,16 @@ const routes = [
     path: '/triste',
     name: 'Triste',
     component: () => import(/* webpackChunkName: "triste" */ '../views/Triste.vue')
+  },
+  {
+    path: '/poker-face',
+    name: 'PokerFace',
+    component: () => import(/* webpackChunkName: "poker-face" */ '../views/Pokerface.vue')
+  },
+  {
+    path: '/modalcomponent',
+    name: 'ModalComponent',
+    component: () => import(/* webpackChunkName: "modalcomponent" */ '../views/Modal.vue')
   }
   
 ]
