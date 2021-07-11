@@ -1,9 +1,13 @@
 <template>
+
   <div id="nav">
+      <p>C:\Users\tomaz\investfy\front_end\src\App.vue</p>
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/about">About</router-link>|
+    <router-link to="/inicial">Inicial</router-link>
+    <router-view/>  
   </div>
-  <router-view/>
+
 </template>
 
 <style>

@@ -1,3 +1,6 @@
+https://github.com/mahenrique94/video-gerenciando-estado-vuex/blob/master/package.json
+https://www.youtube.com/watch?v=qq8yJmXys6U
+
 # front_end
 
 ## Project setup
