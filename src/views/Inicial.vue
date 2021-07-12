@@ -22,8 +22,15 @@ export default {
   computed: {
     ...mapState("account", ["status"]),
   },
-  created() {
-    // reset login status
+  
+     created() {
+
+    var aValue = JSON.parse(localStorage.getItem("INVESTFY"));
+    if (!aValue) {
+         console.log('não locagdo inicial.vue')
+        router.push("/"); 
+    }
+
     this.logout();
   },
   methods: {

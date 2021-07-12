@@ -25,6 +25,14 @@ export default {
     ...mapState("account", ["status"]),
   },
   created() {
+ 
+    var aValue = JSON.parse(localStorage.getItem("INVESTFY"));
+    
+    if (!aValue) {
+         console.log('não logado triste.vue')
+          router.push("/"); 
+    }
+
     this.logout();
   },
   methods: {

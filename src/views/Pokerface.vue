@@ -1,4 +1,5 @@
 <template>
+<div>
   <div @click="clicarTela" class="about">
     <img v-if="humor < 100" alt="cara triste" src="../assets/sadface.png" />
    <h1 v-if="humor < 100">Difícil. Mas eu sou persistente. Plz, tenta novamente. Clica em mim.</h1> 
@@ -19,6 +20,7 @@
       </div>
     </div>
   </teleport>
+</div>
 </template>
 
 <script>
@@ -41,7 +43,13 @@ export default {
   computed: {
     ...mapState("account", ["status"]),
   },
-  created() {
+ created() {
+    var aValue = JSON.parse(localStorage.getItem("INVESTFY"));
+
+    if (!aValue) {
+          console.log('não logado Pokerface.vue')
+          router.push("/"); 
+    }
     this.logout();
   },
   methods: {
@@ -51,19 +59,18 @@ export default {
         return;
       }
 
-      debugger;
-      axios
-        .get("https://geek-jokes.sameerkumar.website/api?format=json")
+      axios.get("http://localhost:3005/piada")
         .then(({ data }) => {
           this.piada = data.joke;
-          this.humor = this.humor + Math.floor(Math.random() * 20);
+          this.humor = this.humor + Math.floor(Math.random() * 50);
           this.displayModal = true;
         });
     },
     fecharEIrFeliz (){
         this.displayModal = false;
          router.push('feliz') ;      
-    }
+    },
+     
   },
 };
 </script>
@@ -103,7 +110,7 @@ h1 {
   align-items: center;
   justify-content: center;
   background-color: rgb(240, 231, 231);
-  /* width: 600px;*/
+  width: 90%;
   height: 300px; 
   padding: 5px;
 }

@@ -31,7 +31,7 @@ export default {
     ...mapActions("account", ["login", "logout"]),
     clicarTela() {
       
-      router.push('poker-face')
+      router.push('inicial')
     },
   },
 };
