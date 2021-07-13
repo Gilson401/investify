@@ -1,32 +1,14 @@
-https://github.com/mahenrique94/video-gerenciando-estado-vuex/blob/master/package.json
-https://www.youtube.com/watch?v=qq8yJmXys6U
+Este Projeto Investfy Front end depende do back end https://github.com/Gilson401/investfyserver
 
-https://github.com/sameerkumar18/geek-joke-api
+Como usar:
+Baixe este projeto;
+Execute npm install;
+A aplicação estará rodando em localhost:8080
 
-get em
-https://geek-jokes.sameerkumar.website/api?format=json
+É necessário já ter iniciado o servidor citado e criado um usuário com email e senha .
 
-# front_end
+A tela inicial é a de login; 
 
-## Project setup
-```
-npm install
-```
+Faça login com o email e a senha.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Siga as instruções que aparecerão nas telas após o login
